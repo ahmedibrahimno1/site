@@ -1,0 +1,25 @@
+# Security and Protection Files - DO NOT COMMIT TO PUBLIC REPOSITORY
+js/protection.js
+js/css-protection.js
+js/obfuscator.js
+security-config.js
+PROTECTION_README.md
+
+# Alternative: Use environment-specific protection
+# Uncomment the line below if you want to use different protection for development
+# js/protection-dev.js
+
+# Backup files
+*.backup
+*.bak
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db 

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Systems for Secure, Accurate Workflow Automation</title>
     <meta name="description" content="Build custom AI platforms, dashboards, and automation tools with full security, privacy, and offline capability.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://i.imgur.com; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,48 +123,54 @@
         <p>All rights reserved.</p>
     </div>
 
+    <!-- Secure embedded protection - all protection measures included -->
+    <script src="js/main.js"></script>
+    
+    <!-- Additional inline protection -->
     <script>
-        // Anti-debugging and protection code
+        // Immediate protection measures
         (function(){
-            const _0x1a2b = ['debugger', 'toString', 'constructor', 'call', 'apply'];
-            const _0x3c4d = function(_0x5e6f) {
-                return _0x1a2b[_0x5e6f];
-            };
+            'use strict';
             
-            // Disable right-click
-            document.addEventListener('contextmenu', function(e) {
+            // Disable text selection
+            document.addEventListener('selectstart', function(e) {
                 e.preventDefault();
                 return false;
             });
             
-            // Disable F12, Ctrl+Shift+I, Ctrl+U
+            // Disable drag and drop
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Additional keyboard shortcuts
             document.addEventListener('keydown', function(e) {
-                if (e.keyCode === 123 || 
-                    (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
-                    (e.ctrlKey && e.keyCode === 85)) {
+                const keyCode = e.keyCode || e.which;
+                const ctrlKey = e.ctrlKey;
+                const shiftKey = e.shiftKey;
+                const altKey = e.altKey;
+                
+                // Additional shortcuts: Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+Shift+E
+                if ((ctrlKey && shiftKey && keyCode === 74) ||
+                    (ctrlKey && shiftKey && keyCode === 67) ||
+                    (ctrlKey && shiftKey && keyCode === 69) ||
+                    (ctrlKey && keyCode === 83) || // Ctrl+S
+                    (ctrlKey && keyCode === 80)) { // Ctrl+P
                     e.preventDefault();
                     return false;
                 }
             });
             
-            // Detect DevTools
-            let devtools = {open: false, orientation: null};
-            setInterval(function() {
-                const threshold = 160;
-                if (window.outerHeight - window.innerHeight > threshold || 
-                    window.outerWidth - window.innerWidth > threshold) {
-                    if (!devtools.open) {
-                        devtools.open = true;
-                        document.body.innerHTML = '<h1>Access Denied</h1>';
-                    }
+            // Prevent view source
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    return false;
                 }
-            }, 1000);
+            });
             
-            // Console warning
-            console.log('%cStop!', 'color: red; font-size: 50px; font-weight: bold;');
-            console.log('%cThis is a protected website. Any attempts to inspect or modify the code will be logged.', 'color: red; font-size: 20px;');
         })();
     </script>
-    <script src="js/main.js"></script>
 </body>
 </html> 

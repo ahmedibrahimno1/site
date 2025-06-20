@@ -90,48 +90,6 @@
         <p>All rights reserved.</p>
     </div>
 
-    <script>
-        // Anti-debugging and protection code
-        (function(){
-            const _0x1a2b = ['debugger', 'toString', 'constructor', 'call', 'apply'];
-            const _0x3c4d = function(_0x5e6f) {
-                return _0x1a2b[_0x5e6f];
-            };
-            
-            // Disable right-click
-            document.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-                return false;
-            });
-            
-            // Disable F12, Ctrl+Shift+I, Ctrl+U
-            document.addEventListener('keydown', function(e) {
-                if (e.keyCode === 123 || 
-                    (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
-                    (e.ctrlKey && e.keyCode === 85)) {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-            
-            // Detect DevTools
-            let devtools = {open: false, orientation: null};
-            setInterval(function() {
-                const threshold = 160;
-                if (window.outerHeight - window.innerHeight > threshold || 
-                    window.outerWidth - window.innerWidth > threshold) {
-                    if (!devtools.open) {
-                        devtools.open = true;
-                        document.body.innerHTML = '<h1>Access Denied</h1>';
-                    }
-                }
-            }, 1000);
-            
-            // Console warning
-            console.log('%cStop!', 'color: red; font-size: 50px; font-weight: bold;');
-            console.log('%cThis is a protected website. Any attempts to inspect or modify the code will be logged.', 'color: red; font-size: 20px;');
-        })();
-    </script>
     <script src="js/main.js"></script>
 </body>
 </html> 
